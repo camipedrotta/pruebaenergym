@@ -343,25 +343,19 @@ h1, h2, h3, .section-title {
 }
 .section-gris .nota { background: var(--blanco); }
 
-/* ---------- Nosotros: banners de instalaciones ---------- */
-.destacados { display: grid; gap: 24px; }
-.destacado-item {
+/* ---------- Nosotros: instalaciones ---------- */
+.destacados {
   display: grid;
-  grid-template-columns: 340px 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 24px;
+}
+.destacado-item {
   background: var(--blanco);
   border: 1px solid #e5e5e5;
-  align-items: stretch;
+  border-top: 6px solid var(--rojo);
 }
-.destacado-item:nth-child(even) { grid-template-columns: 1fr 340px; }
-.destacado-item:nth-child(even) .destacado-img { order: 2; }
-.destacado-img {
-  min-height: 220px;
-  background-color: #1a1a1a;
-  background-size: cover;
-  background-position: center;
-}
-.destacado-txt { padding: 30px 34px; display: flex; flex-direction: column; justify-content: center; }
-.destacado-txt h3 { font-size: 1.4rem; margin-bottom: 10px; }
+.destacado-txt { padding: 28px 30px 32px; }
+.destacado-txt h3 { font-size: 1.25rem; margin-bottom: 10px; }
 .destacado-txt h3::after {
   content: "";
   display: block;
@@ -485,10 +479,6 @@ h1, h2, h3, .section-title {
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .footer-grid { grid-template-columns: 1fr 1fr; }
-  .destacado-item,
-  .destacado-item:nth-child(even) { grid-template-columns: 1fr; }
-  .destacado-item:nth-child(even) .destacado-img { order: 0; }
-  .destacado-img { min-height: 200px; }
 }
 @media (max-width: 760px) {
   .split, .contacto-grid { grid-template-columns: 1fr; gap: 28px; }
