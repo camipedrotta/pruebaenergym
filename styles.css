@@ -141,7 +141,7 @@ h1, h2, h3, .section-title {
   background:
     linear-gradient(100deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.20) 100%),
     url('img/banner-home.jpg') center/cover no-repeat,
-    linear-gradient(135deg, #111 0%, #2a2a2a 100%);
+    linear-gradient(135deg, #111 0%, #2a2a2a 100%); /* fallback si falta la foto */
   clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
 }
 .hero-content {
@@ -456,6 +456,18 @@ h1, h2, h3, .section-title {
   margin-right: 14px;
 }
 .profe-link:hover { color: var(--rojo); }
+
+/* Logos de aliados (Ven Pilates, Dermoskin) — circulares */
+.logo-aliado {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--blanco);
+  border: 3px solid var(--rojo);
+  padding: 6px;
+  margin-bottom: 18px;
+}
 
 /* ---------- Contacto ---------- */
 .contacto-grid {
